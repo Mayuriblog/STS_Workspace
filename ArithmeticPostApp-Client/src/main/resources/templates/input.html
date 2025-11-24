@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h2>Arithmetic Operations Using Microservice</h2>
+
+    <form action="/calculate" method="post">
+
+        Enter Number A:
+        <input type="number" name="a" required><br><br>
+
+        Enter Number B:
+        <input type="number" name="b" required><br><br>
+
+        Select Operation:
+        <select name="operation">
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+        </select>
+        <br><br>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <h3>Result: <span th:text="${result}"></span></h3>
+
+</body>
+</html>
