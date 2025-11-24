@@ -1,0 +1,28 @@
+package com.mayuri.msp1.controller;
+
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping("/calc")
+public class ArithmeticController {
+
+    @GetMapping("/add")
+    public int add(@RequestParam int a, @RequestParam int b) {
+        return a + b;
+    }
+
+    @GetMapping("/sub")
+    public int sub(@RequestParam int a, @RequestParam int b) {
+        return a - b;
+    }
+
+    @GetMapping("/mul")
+    public int mul(@RequestParam int a, @RequestParam int b) {
+        return a * b;
+    }
+
+    @GetMapping("/div")
+    public double div(@RequestParam int a, @RequestParam int b) {
+        return (double) a / b;
+    }
+}
